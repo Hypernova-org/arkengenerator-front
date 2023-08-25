@@ -1,0 +1,273 @@
+@media screen and (min-width: 1000px) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+    margin: 40px 0;
+  }
+  .contact-first-layer {
+    display: flex;
+    justify-content: center;
+    color: #000;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    align-items: center;
+  }
+
+  .map iframe {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    width: 548px;
+    height: 494px;
+  }
+  .contact-first-layer form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 78px 50px 38px;
+    min-width: 652px;
+    gap: 24px;
+    background: #efefef;
+    box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.3);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  form .submit:hover {
+    background: black;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+  }
+  .form_title {
+    color: #000;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  form span {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  form span div {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+  form span div input {
+    display: inline-flex;
+    padding: 12px 20px;
+    border: none;
+    align-items: center;
+    border-radius: 4px;
+    outline: none;
+    background: #fff;
+  }
+  form span div input::placeholder,
+  form div textarea::placeholder {
+    color: #e2e2e2;
+  }
+  form div textarea {
+    width: 100%;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    padding: 12px 20px;
+    resize: vertical;
+  }
+  .submit {
+    display: flex;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    color: #fff;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border: none;
+    background: var(--primary, #f20815);
+  }
+  .contact-second-layer {
+    display: flex;
+    justify-content: space-around;
+  }
+  .contact-second-layer div {
+    display: flex;
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .contact-second-layer div:first-child p {
+    max-width: 307px;
+  }
+  .contact-second-layer div span {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .contact {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 65px;
+    margin: 40px 10px;
+  }
+  .contact-first-layer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #000;
+    font-family: Inter;
+    gap: 40px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    align-items: center;
+  }
+  .map {
+    width: 100%;
+  }
+  .map iframe {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    width: 100%;
+    height: 398.207px;
+    flex-shrink: 0;
+  }
+  .contact-first-layer form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    gap: 24px;
+    background: #efefef;
+    box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.3);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  form .submit:hover {
+    background: black;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+  }
+  .form_title {
+    color: #000;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  form span {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  form span div {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+  form span div input {
+    display: inline-flex;
+    padding: 12px 20px;
+    border: none;
+    width: 100%;
+    align-items: center;
+    border-radius: 4px;
+    outline: none;
+    background: #fff;
+  }
+  form span div input::placeholder,
+  form div textarea::placeholder {
+    color: #e2e2e2;
+  }
+  form div textarea {
+    width: 100%;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    padding: 12px 20px;
+    resize: vertical;
+  }
+  .submit {
+    display: flex;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    color: #fff;
+    font-family: Inter;
+    font-size: 15.373px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border: none;
+    background: var(--primary, #f20815);
+  }
+  .contact-second-layer {
+    display: none;
+    justify-content: space-around;
+  }
+  .contact-second-layer div {
+    display: flex;
+    color: #000;
+    text-align: center;
+    color: #000;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .contact-second-layer div:first-child p {
+    max-width: 100px;
+  }
+  .contact-second-layer div img {
+    width: 45px;
+  }
+  .contact-second-layer div span {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
