@@ -172,4 +172,118 @@ public class MainController {
     return "ru/sdec/catalog";
   }
 
+  @GetMapping("/uz")
+  public String uzIndex() {
+    return "uz/index";
+  }
+
+  @GetMapping("/uz/products")
+  public String uzProducts() {
+    return "uz/products";
+  }
+
+  @GetMapping("/uz/docs")
+  public String uzDocs() {
+    return "uz/docss";
+  }
+
+  @GetMapping("/uz/about")
+  public String uzAbout() {
+    return "uz/about";
+  }
+
+  @GetMapping("/uz/blog")
+  public String uzBlog() {
+    return "uz/blogs";
+  }
+
+  @GetMapping("/uz/contact")
+  public String uzContact() {
+    return "uz/contact";
+  }
+
+  @GetMapping("uz/portative/catalog")
+  public String uzportativecatalog() {
+    return "uz/portative/catalog";
+  }
+
+  @GetMapping("/uz/baudoin/generators")
+  public String uzbaudoingenerators() {
+    return "/uz/baudoin/generators";
+  }
+
+  @GetMapping("/uz/baudoin/linz_catalog")
+  public String uzbaudoinlinzctalog() {
+    return "/uz/baudoin/linz_catalog";
+  }
+
+  @GetMapping("/uz/baudoin/nekra_catalog")
+  public String uzbaudoinnekractalog() {
+    return "/uz/baudoin/nekra_catalog";
+  }
+
+  @GetMapping("/uz/cummins/generators")
+  public String uzcumminsgenerators() {
+    return "/uz/cummins/generators";
+  }
+
+  @GetMapping("/uz/cummins/linz_catalog")
+  public String uzcumminslinzctalog() {
+    return "/uz/cummins/linz_catalog";
+  }
+
+  @GetMapping("/uz/cummins/nekra_catalog")
+  public String uzcumminsnekractalog() {
+    return "/uz/cummins/nekra_catalog";
+  }
+
+  @GetMapping("/uz/mitsubishi/generators")
+  public String uzmitsubishigenerators() {
+    return "/uz/mitsubishi/generators";
+  }
+
+  @GetMapping("/uz/mitsubishi/linz_catalog")
+  public String uzmitsubishislinzctalog() {
+    return "/uz/mitsubishi/linz_catalog";
+  }
+
+  @GetMapping("/uz/mitsubishi/nekra_catalog")
+  public String uzmitsubishinekractalog() {
+    return "/uz/mitsubishi/nekra_catalog";
+  }
+
+  @GetMapping("/uz/perkins/generators")
+  public String uzperkinsgenerators() {
+    return "/uz/perkins/generators";
+  }
+
+  @GetMapping("/uz/perkins/linz_catalog")
+  public String uzperkinsslinzctalog() {
+    return "/uz/perkins/linz_catalog";
+  }
+
+  @GetMapping("/uz/perkins/nekra_catalog")
+  public String uzperkinsnekractalog() {
+    return "/uz/perkins/nekra_catalog";
+  }
+
+  @GetMapping("/uz/sdec/catalog")
+  public String uzsdeccatalog() {
+    return "/uz/sdec/catalog";
+  }
+
+  @GetMapping("/uz/yanmar/generators")
+  public String uzyanvargenerators() {
+    return "/uz/yanmar/generators";
+  }
+
+  @GetMapping("/uz/yanmar/linz_catalog")
+  public String uzyanmarslinzctalog() {
+    return "/uz/yanmar/linz_catalog";
+  }
+
+  @GetMapping("/uz/yanmar/nekra_catalog")
+  public String uzyanmarnekractalog() {
+    return "/uz/yanmar/nekra_catalog";
+  }
 }
