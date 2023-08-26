@@ -286,4 +286,44 @@ public class MainController {
   public String uzyanmarnekractalog() {
     return "/uz/yanmar/nekra_catalog";
   }
+
+  @GetMapping("/en")
+  public String enIndex() {
+    return "en/index";
+  }
+
+  @GetMapping("/en/products")
+  public String enProducts() {
+    return "en/products";
+  }
+
+  @GetMapping("/en/docs")
+  public String enDocs() {
+    return "en/docss";
+  }
+
+  @GetMapping("/en/about")
+  public String enAbout() {
+    return "en/about";
+  }
+
+  @GetMapping("/en/blog")
+  public String enBlog() {
+    return "en/blogs";
+  }
+
+  @GetMapping("/en/contact")
+  public String enContact() {
+    return "en/contact";
+  }
+
+  @GetMapping("/en/portative/catalog")
+  public String enPortativeCatalog() {
+    return "/en/portative/catalog";
+  }
+
+  @GetMapping("/en/baudoin/generators")
+  public String enBaudoingenerators() {
+    return "/en/baudoin/generators";
+  }
 }
