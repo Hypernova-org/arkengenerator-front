@@ -52,7 +52,7 @@
           <p>EN</p>
         </button>
         <div class="dropdown-content">
-          <a href="../../ru/yanmar/nekra_catalog.html">
+          <a href="/ru/yanmar/nekra_catalog">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 36 36">
               <path fill="#CE2028" d="M36 27a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4v-4h36v4z" />
               <path fill="#22408C" d="M0 13h36v10H0z" />
@@ -60,7 +60,7 @@
             </svg>
             <p>RU</p>
           </a>
-          <a href="../../uz/yanmar/nekra_catalog.html">
+          <a href="/uz/yanmar/nekra_catalog">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 36 36">
               <path fill="#0099B5" d="M0 9v4h36V9a4 4 0 0 0-4-4H4a4 4 0 0 0-4 4z" />
               <path fill="#1EB53A" d="M36 27v-4H0v4a4 4 0 0 0 4 4h28a4 4 0 0 0 4-4z" />
@@ -71,7 +71,7 @@
             </svg>
             <p>UZ</p>
           </a>
-          <a href="../../tr/yanmar/nekra_catalog.html"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+          <a href="/tr/yanmar/nekra_catalog"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
               viewBox="0 0 36 36">
               <path fill="#E30917" d="M36 27a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v18z" />
               <path fill="#EEE"
@@ -82,7 +82,7 @@
         </div>
       </div>
       <div class="lang">
-        <a href="../../en/yanmar/nekra_catalog.html"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+        <a href="/en/yanmar/nekra_catalog"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
             viewBox="0 0 64 64">
             <path fill="#2e3192"
               d="M38 54h16c1.977 0 3.657-.446 5.052-1.223L38 40.219V54zm25.66-7.79c.228-1.017.344-2.094.344-3.211v-5h-14.11l13.762 8.211M.35 17.759A14.635 14.635 0 0 0 0 21v5h14.164L.35 17.759zM26 10H10c-1.963 0-3.632.44-5.021 1.206L26 23.746V10zM5.043 52.826C6.419 53.57 8.066 54 10 54h16V40.324L5.043 52.826zM0 38v5c0 1.151.122 2.26.363 3.303L14.282 38H0zm59.115-26.745C57.709 10.457 56.006 10 54 10H38v13.851l21.115-12.596zM64 26v-5c0-1.094-.113-2.149-.332-3.147L50.012 26H64z" />
@@ -92,14 +92,14 @@
             <path fill="#be1e2d"
               d="M21.938 26L1.888 14.031c-.431.64-.777 1.344-1.063 2.094L17.372 26h4.563M63.09 48.09L46.277 38h-4.656l20.313 12.219a9.866 9.866 0 0 0 1.156-2.125m-2.371-35.703L37.969 26l4.619.003L62.219 14.25c-.438-.797-.9-1.311-1.5-1.859M1.813 49.875a8.996 8.996 0 0 0 1.609 1.844L26.063 38H21.5L1.813 49.875z" />
           </svg>EN</a>
-        <a href="../../tr/yanmar/nekra_catalog.html"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+        <a href="/tr/yanmar/nekra_catalog"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
             viewBox="0 0 36 36">
             <path fill="#E30917" d="M36 27a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v18z" />
             <path fill="#EEE"
               d="M16 24a6 6 0 1 1 0-12c1.31 0 2.52.425 3.507 1.138A7.332 7.332 0 0 0 14 10.647A7.353 7.353 0 0 0 6.647 18A7.353 7.353 0 0 0 14 25.354c2.195 0 4.16-.967 5.507-2.492A5.963 5.963 0 0 1 16 24zm3.913-5.77l2.44.562l.22 2.493l1.288-2.146l2.44.561l-1.644-1.888l1.287-2.147l-2.303.98l-1.644-1.889l.22 2.494z" />
           </svg>TR</a>
 
-        <a href="../../ru/yanmar/nekra_catalog.html"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+        <a href="/ru/yanmar/nekra_catalog"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
             viewBox="0 0 36 36">
             <path fill="#CE2028" d="M36 27a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4v-4h36v4z" />
             <path fill="#22408C" d="M0 13h36v10H0z" />
@@ -292,8 +292,47 @@
       </div>
     </div>
   </div>
-  <script src="./yanmar-nekra.js"></script>
-  <script src="..//scripts/main.js"></script>
+  <script>
+    const temp = document.querySelector("#table-temp").content;
+    const list = document.querySelector(".table");
+    const jsonUrl =
+      "https://raw.githubusercontent.com/odilov-a/json-arken/master/eng/yanmar-nekra/application.json";
+
+    function renderProducts(array, place) {
+      place.innerHTML = null;
+      array.forEach((product) => {
+        const productTemplate = temp.cloneNode(true);
+        const productUrl = productTemplate.querySelector(".url");
+        productUrl.href = product.url;
+        productUrl.textContent = product.generator_model;
+        const productDizel = productTemplate.querySelector(".dizel");
+        productDizel.textContent = product.diesel_engine;
+        const productSlindr = productTemplate.querySelector(".silidr");
+        productSlindr.textContent = product.number_of_cylinder;
+        const productGenerator = productTemplate.querySelector(".generator");
+        productGenerator.textContent = product.alternator;
+        const productPr1 = productTemplate.querySelector(".pr1");
+        productPr1.textContent = product.prime_kw;
+        const productPr2 = productTemplate.querySelector(".pr2");
+        productPr2.textContent = product.prime_kva;
+        const productW1 = productTemplate.querySelector(".w1");
+        productW1.textContent = product.standby_kw;
+        const productW2 = productTemplate.querySelector(".w2");
+        productW2.textContent = product.standby_kva;
+
+        place.append(productTemplate);
+      });
+    }
+
+    fetch(jsonUrl)
+      .then((response) => response.json())
+      .then((data) => {
+        renderProducts(data.yanmar_nekra, list)
+      })
+      .catch((error) => console.error("Error fetching data: " + error));
+
+  </script>
+  <script src="/scripts/main.js"></script>
 </body>
 
 </html>

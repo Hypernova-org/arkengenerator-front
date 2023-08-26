@@ -319,11 +319,86 @@ public class MainController {
 
   @GetMapping("/en/portative/catalog")
   public String enPortativeCatalog() {
-    return "/en/portative/catalog";
+    return "en/portative/catalog";
   }
 
   @GetMapping("/en/baudoin/generators")
   public String enBaudoingenerators() {
-    return "/en/baudoin/generators";
+    return "en/baudoin/generators";
+  }
+
+  @GetMapping("/en/baudoin/linz_catalog")
+  public String enbaudoinslinzctalog() {
+    return "en/baudoin/linz_catalog";
+  }
+
+  @GetMapping("/en/baudoin/nekra_catalog")
+  public String enbaudoinnekractalog() {
+    return "en/baudoin/nekra_catalog";
+  }
+
+  @GetMapping("/en/cummins/generators")
+  public String encumminsgenerators() {
+    return "en/cummins/generators";
+  }
+
+  @GetMapping("/en/cummins/linz_catalog")
+  public String encumminslinzctalog() {
+    return "en/cummins/linz_catalog";
+  }
+
+  @GetMapping("/en/cummins/nekra_catalog")
+  public String enbcumminsnekractalog() {
+    return "en/cummins/nekra_catalog";
+  }
+
+  @GetMapping("/en/mitsubishi/generators")
+  public String enmitsubishigenerators() {
+    return "en/mitsubishi/generators";
+  }
+
+  @GetMapping("/en/mitsubishi/linz_catalog")
+  public String enmitsubishilinzctalog() {
+    return "en/mitsubishi/linz_catalog";
+  }
+
+  @GetMapping("/en/mitsubishi/nekra_catalog")
+  public String enmitsubishinekractalog() {
+    return "en/mitsubishi/nekra_catalog";
+  }
+
+  @GetMapping("/en/perkins/generators")
+  public String enperkinsgenerators() {
+    return "en/perkins/generators";
+  }
+
+  @GetMapping("/en/perkins/linz_catalog")
+  public String enperkinslinzctalog() {
+    return "en/perkins/linz_catalog";
+  }
+
+  @GetMapping("/en/perkins/nekra_catalog")
+  public String enperkinsnekractalog() {
+    return "en/perkins/nekra_catalog";
+  }
+
+  @GetMapping("/en/sdec/catalog")
+  public String ensdeccatalog() {
+    return "en/sdec/catalog";
+  }
+
+  @GetMapping("/en/yanmar/generators")
+  public String eyanmarsgenerators() {
+    return "en/yanmar/generators";
+  }
+
+  @GetMapping("/en/yanmar/linz_catalog")
+  public String enyanmarlinzctalog() {
+    return "en/yanmar/linz_catalog";
+  }
+
+  @GetMapping("/en/yanmar/nekra_catalog")
+  public String enyanmarnekractalog() {
+    return "en/yanmar/nekra_catalog";
   }
 }
