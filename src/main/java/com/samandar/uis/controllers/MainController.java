@@ -37,9 +37,8 @@ public class MainController {
       connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
       connection.setConnectTimeout(200);
       connection.setReadTimeout(200);
-      String requestBody = "chat_id=-1001917320693&text=New Contact: company_name - " + company_name + ", name - "
-          + name
-          + ", position - " + position + ", phone - " + phone + ", message - " + message;
+      String requestBody = "chat_id=-1001917320693&text=🌍 Saytdan xabar keldi:\n 🏢 Kompaniya nomi: " + company_name + " \n🙋🏻‍♂️ Ism :" + name
+          + "\n ⬆️ Lavozimi :" + position + "\n☎️ Telefon raqami:" + phone + "\n📩 Xabar : " + message;
       try (OutputStream os = connection.getOutputStream()) {
         byte[] input = requestBody.getBytes("UTF-8");
         os.write(input, 0, input.length);
