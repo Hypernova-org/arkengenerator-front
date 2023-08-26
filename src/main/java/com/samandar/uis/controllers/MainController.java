@@ -21,7 +21,7 @@ public class MainController {
 
   @GetMapping("/")
   public String index(Model model) {
-    return "index";
+    return "ru/index";
   }
 
   @PostMapping("/contact")
