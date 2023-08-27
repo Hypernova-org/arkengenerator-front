@@ -34,7 +34,7 @@ public class UzController {
 
   @GetMapping("/blog")
   public String blog() {
-    return UZ_PREFIX + "blog";
+    return UZ_PREFIX + "blogs";
   }
 
   @GetMapping("/contact")
