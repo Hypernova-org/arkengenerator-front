@@ -1,0 +1,97 @@
+@media screen and (min-width: 1000px) {
+    .body-error {
+        background:var(--clr-primary);
+        overflow: hidden;
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+      }
+      
+      .error {
+        order: 0;
+        flex: 0 1 auto;
+        align-self: auto;
+        width: 60%;
+      }
+      .error svg {
+        display: block;
+        width: 100%;
+        height: auto;
+        fill: #fff;
+      }
+      
+      .links {
+        margin-top: 45px;
+        order: 0;
+        flex: 0 1 auto;
+        align-self: auto;
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: stretch;
+        align-items: flex-start;
+      }
+      .links a {
+        order: 0;
+        flex: 0 1 auto;
+        align-self: auto;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        font-family: "Open Sans", sans-serif;
+        text-transform: uppercase;
+      }
+      .links a:hover {
+        background-color: #fff;
+        color: #34559a;
+        text-decoration: none;
+      }
+}
+@media screen and (max-width: 1000px) {
+    .body-error {
+        background:var(--clr-primary);
+        overflow: hidden;
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+      }
+      
+      .error svg {
+        display: block;
+        width: 100%;
+        fill: #fff;
+      }
+      
+      .links {
+        align-self: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .links a {
+        margin-top: 25px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        font-family: "Open Sans", sans-serif;
+        text-transform: uppercase;
+      }
+      .links a:hover {
+        background-color: #fff;
+        color: #34559a;
+        text-decoration: none;
+      }
+}

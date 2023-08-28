@@ -15,8 +15,15 @@
 </head>
 
 <body>
-  <div id="loader" class="center"></div>
-  <nav class="navbar">
+<div id="loader" class="loader-div">
+  <div class="loader">
+    <img src="/assets/img/Group44.png" alt="arken" />
+    <img src="/assets/img/Group45.png" alt="arken" />
+    <img src="/assets/img/Group48.png" alt="arken" />
+    <img src="/assets/img/Group47.png" alt="arken" />
+    <img src="/assets/img/Group46.png" alt="arken" />
+  </div>
+</div> <nav class="navbar">
     <img class="navbar_logo" src="/assets/img/logo.png" alt="arken" />
     <ul class="navbar_list">
       <svg class="nav-close" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
@@ -27,7 +34,28 @@
       <li class="navbar_list-item">
         <a href="/uz/products">Mahsulotlar</a>
       </li>
-      <li class="navbar_list-item">
+      <div class="docs-drop">
+        <button class="docs-btn">
+          Hujjatlar<svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="m12 15.4l-6-6L7.4 8l4.6 4.6L16.6 8L18 9.4l-6 6Z"
+            />
+          </svg>
+        </button>
+        <div class="docs-drop-content">
+          <a href="/uz/docs#catalog"> <p>Katalog</p></a>
+          <a href="/uz/docs#userGuide"> <p>Yo'riqnoma</p></a>
+          <a href="/uz/docs#certificates"> <p>Sertifikatlar</p></a>
+          <a href="/uz/docs#brochuras"> <p>Broshyuralar</p></a>
+        </div>
+      </div>
+      <li class="docs-link navbar_list-item">
         <a href="/uz/docs">Hujjatlar</a>
       </li>
       <li class="navbar_list-item">
@@ -94,13 +122,10 @@
             <path fill="#EEE"
               d="M16 24a6 6 0 1 1 0-12c1.31 0 2.52.425 3.507 1.138A7.332 7.332 0 0 0 14 10.647A7.353 7.353 0 0 0 6.647 18A7.353 7.353 0 0 0 14 25.354c2.195 0 4.16-.967 5.507-2.492A5.963 5.963 0 0 1 16 24zm3.913-5.77l2.44.562l.22 2.493l1.288-2.146l2.44.561l-1.644-1.888l1.287-2.147l-2.303.98l-1.644-1.889l.22 2.494z" />
           </svg>TR</a>
-        <a href="/ru/contact"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 36 36">
-            <path fill="#0099B5" d="M0 9v4h36V9a4 4 0 0 0-4-4H4a4 4 0 0 0-4 4z" />
-            <path fill="#1EB53A" d="M36 27v-4H0v4a4 4 0 0 0 4 4h28a4 4 0 0 0 4-4z" />
-            <path fill="#CE1126" d="M0 13h36v1.5H0zm0 8.5h36V23H0z" />
-            <path fill="#EEE" d="M0 18v3.5h36v-7H0z" />
-            <path fill="#FFF"
-              d="M4.2 9.16a3.12 3.12 0 0 1 2.6-3.076a3.12 3.12 0 1 0 0 6.152A3.12 3.12 0 0 1 4.2 9.16zm4.683 2.303l-.14-.431l-.14.431h-.454l.367.267l-.14.431l.367-.267l.366.267l-.14-.431l.367-.267zm2.702 0l-.14-.431l-.14.431h-.453l.367.267l-.14.431l.366-.267l.367.267l-.14-.431l.367-.267zm-.14-2.927l-.14.431h-.453l.367.267l-.14.431l.366-.267l.367.267l-.14-.431l.367-.267h-.454zm2.843 2.927l-.14-.431l-.14.431h-.453l.366.267l-.14.431l.367-.267l.367.267l-.14-.431l.366-.267zm-.14-2.927l-.14.431h-.453l.366.267l-.14.431l.367-.267l.367.267l-.14-.431l.366-.267h-.453zm0-2.496l-.14.431h-.453l.366.267l-.14.431l.367-.267l.367.267l-.14-.431l.366-.267h-.453zm2.843 5.423l-.14-.431l-.14.431h-.454l.367.267l-.14.431l.367-.267l.366.267l-.14-.431l.367-.267zm-.14-2.927l-.14.431h-.454l.367.267l-.14.431l.367-.267l.366.267l-.14-.431l.367-.267h-.453zm0-2.496l-.14.431h-.454l.367.267l-.14.431l.367-.267l.366.267l-.14-.431l.367-.267h-.453zm2.842 5.423l-.14-.431l-.14.431h-.453l.367.267l-.14.431l.366-.267l.367.267l-.14-.431l.367-.267zm-.14-2.927l-.14.431h-.453l.367.267l-.14.431l.366-.267l.367.267l-.14-.431l.367-.267h-.454zm0-2.496l-.14.431h-.453l.367.267l-.14.431l.366-.267l.367.267l-.14-.431l.367-.267h-.454z" />
+          <a href="/ru/contact"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 36 36">
+            <path fill="#CE2028" d="M36 27a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4v-4h36v4z" />
+            <path fill="#22408C" d="M0 13h36v10H0z" />
+            <path fill="#EEE" d="M32 5H4a4 4 0 0 0-4 4v4h36V9a4 4 0 0 0-4-4z" />
           </svg>RU</a>
       </div>
     </ul>

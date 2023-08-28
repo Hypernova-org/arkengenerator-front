@@ -22,6 +22,11 @@ public class EnController {
     return EN_PREFIX + "products";
   }
 
+  @GetMapping("/blog_detail")
+  public String blog_detail() {
+    return EN_PREFIX + "blog_detail";
+  }
+
   @GetMapping("/docs")
   public String docs() {
     return EN_PREFIX + "docss";

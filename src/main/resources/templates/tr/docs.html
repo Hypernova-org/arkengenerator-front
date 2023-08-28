@@ -11,14 +11,21 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="/css/docs.css" />
   <link rel="stylesheet" href="/css/home.css" />
-  <title>ARKEN | DOKÜMANTASYON</title>
+  <title>ARKEN | BELGELER</title>
 
   <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico" />
 </head>
 
 <body>
-  <div id="loader" class="center"></div>
-  <nav class="navbar">
+<div id="loader" class="loader-div">
+  <div class="loader">
+    <img src="/assets/img/Group44.png" alt="arken" />
+    <img src="/assets/img/Group45.png" alt="arken" />
+    <img src="/assets/img/Group48.png" alt="arken" />
+    <img src="/assets/img/Group47.png" alt="arken" />
+    <img src="/assets/img/Group46.png" alt="arken" />
+  </div>
+</div> <nav class="navbar">
     <img class="navbar_logo" src="/assets/img/logo.png" alt="arken" />
     <ul class="navbar_list">
       <svg class="nav-close" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
@@ -29,7 +36,28 @@
       <li class="navbar_list-item">
         <a href="/tr/products">Ürünler</a>
       </li>
-      <li class="navbar_list-item">
+      <div class="docs-drop">
+        <button class="docs-btn">
+          Belgeler<svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="m12 15.4l-6-6L7.4 8l4.6 4.6L16.6 8L18 9.4l-6 6Z"
+            />
+          </svg>
+        </button>
+        <div class="docs-drop-content">
+          <a href="/tr/docs#catalog"> <p>Katalog</p></a>
+          <a href="/tr/docs#userGuide"> <p>Talimat</p></a>
+          <a href="/tr/docs#certificates"> <p>Sertifikalar</p></a>
+          <a href="/tr/docs#brochuras"> <p>Broşürler</p></a>
+        </div>
+      </div>
+      <li class="docs-link navbar_list-item">
         <a href="#">Belgeler</a>
       </li>
       <li class="navbar_list-item">
@@ -116,11 +144,11 @@
 
   <div class="main">
     <div class="titles">
-      <h1 class="title">DOKÜMANTASYON</h1>
+      <h1 class="title">Belgeler</h1>
       <span class="border"></span>
     </div>
     <div class="docs">
-      <div class="catalog">
+      <div class="catalog" id="catalog">
         <div class="docs_catalog">
           <h1 class="docs_catalog_title">Genel ürün kataloğu</h1>
           <div class="docs_catalog_items">
@@ -136,7 +164,7 @@
 
       <div class="border_catalog"></div>
 
-      <div class="catalog guides_main">
+      <div class="catalog guides_main" id="userGuide">
         <h1 class="docs_catalog_title">Talimat</h1>
         <div class="guides">
           <a class="tse" href="https://arkenjenerator.com.tr/File/2.12.2022-141226-ARKEN%2001-05%20BELGE.PDF">
@@ -172,7 +200,7 @@
         </div>
       </div>
       <div class="border_catalog"></div>
-      <div class="certificates">
+      <div class="certificates" id="certificates">
         <p class="certificates_title">Sertifikalar</p>
         <div class="certificates-container">
           <a class="certificate"
@@ -199,7 +227,7 @@
       </div>
 
       <div class="border_catalog"></div>
-      <div class="brochuras">
+      <div class="brochuras" id="brochuras">
         <p class="brochuras_title">Broşürler</p>
         <div class="brochuras_items">
           <a href="https://arkenjenerator.com.tr/Content/assest/pdf/urunbrosurleri/Perkins.pdf">
