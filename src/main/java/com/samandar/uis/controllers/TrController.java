@@ -33,6 +33,11 @@ public class TrController {
     return TR_PREFIX + "docs";
   }
 
+  @GetMapping("/blog_detail")
+  public String blog_detail() {
+    return TR_PREFIX + "blog_detail";
+  }
+
   @GetMapping("/about")
   public String about() {
     return TR_PREFIX + "about";

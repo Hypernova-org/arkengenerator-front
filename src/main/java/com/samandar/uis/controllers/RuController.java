@@ -34,6 +34,11 @@ public class RuController {
     return RU_PREFIX + "docs";
   }
 
+  @GetMapping("/blog_detail")
+  public String blog_detail() {
+    return RU_PREFIX + "blog_detail";
+  }
+
   @GetMapping("/about")
   public String about() {
     return RU_PREFIX + "about";
