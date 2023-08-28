@@ -1,3 +1,4 @@
+
 @media screen and (min-width: 1280px) {
   .blogs {
     margin: 40px 100px 0 100px;
@@ -6,6 +7,55 @@
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     gap: 45px;
+  }
+  .detail_item{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    padding: 45px;
+  }
+  .detail_photo{
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+  }
+  .detail_item img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+
+  }
+  .detail_date{
+    color: #ccc8c8;
+    text-align: justify;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 156.023%; /* 18.723px */
+    display: flex;
+    gap: 10px;
+  }
+  .detail_name{
+    color: #000;
+    text-align: justify;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 156.023%; /* 28.084px */
+  }
+  .detail_desc{
+    color: rgba(0, 0, 0, 0.5);
+    text-align: justify;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 156.023%; /* 24.964px */
   }
   .blogs-item {
     display: flex;
@@ -52,6 +102,11 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
     line-height: 156.023%; /* 24.964px */
   }
   .blogs-item a {
@@ -79,6 +134,56 @@
     display: flex;
     gap: 45px;
     flex-direction: column;
+  }
+  .detail_date{
+    color: #ccc8c8;
+    text-align: justify;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 156.023%; /* 18.723px */
+    display: flex;
+    gap: 10px;
+  }
+  .detail_name{
+    color: #000;
+    text-align: justify;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 156.023%; /* 28.084px */
+  }
+  .detail_desc{
+    color: rgba(0, 0, 0, 0.5);
+    text-align: justify;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 156.023%; /* 24.964px */
+  }
+  
+  .detail_item{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    padding: 45px;
+  }
+  .detail_photo{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  .detail_item img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+
   }
   .blogs-item {
     margin: 12px;
@@ -126,6 +231,11 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
     line-height: 156.023%; /* 24.964px */
   }
   .blogs-item a {

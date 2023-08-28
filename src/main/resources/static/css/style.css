@@ -5,6 +5,47 @@
   padding: 0;
   scroll-behavior: smooth;
 }
+.loader{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.loader-div {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  z-index: 99999;
+  margin: auto;
+}
+.loader img {
+  animation: loader-spin 1.5s infinite linear;
+  -webkit-animation: loader-spin 1.5s infinite linear;
+}
+.loader img:nth-child(1) {
+  animation-delay: 1.5s;
+}
+.loader img:nth-child(2) {
+  animation-delay: 1.6s;
+}
+.loader img:nth-child(3) {
+  animation-delay: 1.7s;
+}
+.loader img:nth-child(4) {
+  animation-delay: 1.8s;
+}
+.loader img:nth-child(5) {
+  animation-delay: 1.9s;
+}
+@keyframes loader-spin {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
 
 @keyframes dropdown {
   0% {
@@ -14,11 +55,7 @@
     height: 100%;
   }
 }
-@keyframes spin {
-  100% {
-    transform: rotate(360deg);
-  }
-}
+
 
 :root {
   --clr-primary: #f20815;
@@ -124,96 +161,14 @@ a {
     gap: 5px;
   }
 
-  .dropbtn {
-    background-color: #ffffff;
-    color: #000;
-    font-family: Inter;
-    font-size: 18px;
-    font-style: normal;
-    border-radius: 10px;
-    font-weight: 600;
-    line-height: normal;
-    padding: 5px 10px;
-    gap: 4px;
-    border: none;
+  .docs-drop {
     display: none;
-    align-items: center;
-    cursor: pointer;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-  }
-  .dropbtn svg {
-    width: 25px;
   }
 
   .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-
-  .dropdown-content {
     display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    width: 100%;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
   }
 
-  .dropdown-content a {
-    background-color: #ffffff;
-    color: #000;
-    font-family: Inter;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    padding: 5px 10px;
-    gap: 4px;
-    border: none;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    align-items: center;
-    display: flex;
-    text-decoration: none;
-  }
-  .dropdown-content a svg {
-    width: 25px;
-  }
-
-  .dropdown-content a:hover {
-    background-color: #f1f1f1;
-  }
-  .dropdown:hover .dropdown-content a {
-    animation: 0.5s dropdown;
-  }
-  .dropdown:hover .dropdown-content {
-    display: block;
-    animation: 0.4s dropdown;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    -webkit-animation: 0.4s dropdown;
-  }
-  .dropdown:hover {
-    transition: 0.4s ease-in-out;
-    -webkit-transition: 0.4s ease-in-out;
-    -moz-transition: 0.4s ease-in-out;
-    -ms-transition: 0.4s ease-in-out;
-    -o-transition: 0.4s ease-in-out;
-    animation: 0.5s dropdown;
-    -webkit-animation: 0.5s dropdown;
-  }
-
-  .dropdown:hover .dropbtn {
-    background-color: white;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-  }
   .products {
     display: flex;
     padding: 40px 0;
@@ -253,14 +208,8 @@ a {
     -o-border-radius: 6px;
     box-shadow: 1px -1px 12px 3px rgba(1, 2, 2, 0.2);
   }
-  .ru-div-not{
-    left: 125px !important;
-  }
   .ru-water {
     width: 50%;
-  }
-  .ru-card{
-    padding: 0 45px 0 45px;
   }
   .cummins {
     width: 60px !important;
@@ -270,19 +219,24 @@ a {
     width: max-content !important;
   }
   .portative-wolt {
-    bottom: 90px !important;
+    bottom: 40px !important;
+  }
+  .portativ-div-not {
+    position: relative;
+    bottom: 200px !important;
+    left: 110px !important;
   }
   .portative-learn {
-    bottom: 80px !important;
+    bottom: 20px !important;
   }
   .brand-img {
     width: 150px;
     position: relative;
-    bottom: 160px;
+    bottom: 120px;
     flex-shrink: 0;
   }
   .img-generator {
-    width: 196px;
+    width: 150px;
     position: relative;
     right: 65px;
     top: 50px;
@@ -292,13 +246,13 @@ a {
     width: 80px;
     flex-shrink: 0;
     position: relative;
-    top: 320px;
-    left: 150px;
+    top: 280px;
+    left: 100px;
 
     z-index: 1;
   }
   .mator-img {
-    width: 196px;
+    width: 150px;
     position: relative;
     top: 40px;
     right: 65px;
@@ -326,9 +280,9 @@ a {
   .products_details-div-not {
     display: flex;
     position: relative;
-    bottom: 215px;
-    gap: 15px;
-    left: 100px;
+    bottom: 155px;
+    gap: 10px;
+    left: 90px;
     flex-direction: column;
     color: #000;
     font-family: Inter;
@@ -340,7 +294,7 @@ a {
 
   .products_details-div__item {
     display: flex;
-    gap: 20px;
+    gap: 5px;
     align-items: center;
   }
   .products_details-div__item img {
@@ -350,8 +304,8 @@ a {
   .product_btns {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
   }
   .all_btn {
     display: flex;
@@ -377,7 +331,7 @@ a {
     display: inline-flex;
     width: max-content;
     position: relative;
-    bottom: 70px;
+    bottom: 40px;
     padding: 5px;
     justify-content: center;
     align-items: center;
@@ -397,7 +351,7 @@ a {
   .product_btns a {
     display: flex;
     position: relative;
-    bottom: 50px;
+    bottom: 20px;
     width: max-content;
     border: none;
     padding: 5px 15px;
@@ -569,27 +523,14 @@ a {
     line-height: 156.023%; /* 13.792px */
   }
 
-  #loader {
-    border: 12px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 12px solid #f20815;
-    width: 70px;
-    height: 70px;
-    animation: spin 1s linear infinite;
-  }
 
-  #loader {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-  }
 }
 /* Hide all product cards by default */
 @media screen and (min-width: 1000px) {
   #resItemList {
+    display: none;
+  }
+  .docs-link {
     display: none;
   }
   .portative-text {
@@ -632,6 +573,81 @@ a {
   }
   .navbar_logo {
     height: 40px;
+  }
+
+  .docs-btn {
+    display: flex;
+    align-items: center;
+    background: none;
+    color: var(--clr-white);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border: none;
+  }
+
+  .docs-drop {
+    position: relative;
+    display: inline-block;
+  }
+
+  .docs-drop-content {
+    display: none;
+    position: absolute;
+    background-color: #f20815;
+    width: max-content;
+    z-index: 9999;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+  }
+
+  .docs-drop-content a {
+    background-color: #f20815;
+    color: var(--clr-white);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 10px 20px;
+    border: none;
+    display: flex;
+    cursor: pointer;
+  }
+  .docs-drop:hover .docs-drop-content {
+    display: block;
+    animation: drop-docs 0.4s;
+    -webkit-animation: drop-docs 0.4s;
+  }
+  .docs-btn:hover .docs-drop-content {
+    transition: 0.4s ease-in-out;
+    animation: drop-docs 0.4s;
+    -webkit-animation: drop-docs 0.4s;
+    -webkit-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+    -ms-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
+  }
+  @keyframes drop-docs {
+    0% {
+      transform: translateY(50px);
+      -webkit-transform: translateY(50px);
+      -moz-transform: translateY(50px);
+      -ms-transform: translateY(50px);
+      -o-transform: translateY(50px);
+    }
+    100% {
+      transform: translateY(0);
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -o-transform: translateY(0);
+    }
   }
 
   .dropbtn {
@@ -1118,27 +1134,4 @@ a {
     line-height: 156.023%; /* 18.723px */
   }
 
-  #loader {
-    border: 12px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 12px solid #f20815;
-    width: 70px;
-    height: 70px;
-    animation: spin 1s linear infinite;
-  }
-
-  #loader {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-  }
-
-  @keyframes spin {
-    100% {
-      transform: rotate(360deg);
-    }
-  }
 }

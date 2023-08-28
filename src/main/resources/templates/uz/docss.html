@@ -16,9 +16,16 @@
 </head>
 
 <body>
-  <div id="loader" class="center"></div>
-  <nav class="navbar">
-    <img class="navbar_logo" src="/assets/img/logo.png" alt="arken" />
+<div id="loader" class="loader-div">
+  <div class="loader">
+    <img src="/assets/img/Group44.png" alt="arken" />
+    <img src="/assets/img/Group45.png" alt="arken" />
+    <img src="/assets/img/Group48.png" alt="arken" />
+    <img src="/assets/img/Group47.png" alt="arken" />
+    <img src="/assets/img/Group46.png" alt="arken" />
+  </div>
+</div> <nav class="navbar">
+      <a href="/uz"><img class="navbar_logo" src="/assets/img/logo.png" alt="arken" /></a>
     <ul class="navbar_list">
       <svg class="nav-close" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
         <path fill="currentColor"
@@ -28,7 +35,28 @@
       <li class="navbar_list-item">
         <a href="/uz/products">Mahsulotlar</a>
       </li>
-      <li class="navbar_list-item">
+      <div class="docs-drop">
+        <button class="docs-btn">
+          Hujjatlar<svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="m12 15.4l-6-6L7.4 8l4.6 4.6L16.6 8L18 9.4l-6 6Z"
+            />
+          </svg>
+        </button>
+        <div class="docs-drop-content">
+          <a href="/uz/docs#catalog"> <p>Katalog</p></a>
+          <a href="/uz/docs#userGuide"> <p>Yo'riqnoma</p></a>
+          <a href="/uz/docs#certificates"> <p>Sertifikatlar</p></a>
+          <a href="/uz/docs#brochuras"> <p>Broshyuralar</p></a>
+        </div>
+      </div>
+      <li class="docs-link navbar_list-item">
         <a href="#">Hujjatlar</a>
       </li>
       <li class="navbar_list-item">
@@ -95,13 +123,10 @@
             <path fill="#EEE"
               d="M16 24a6 6 0 1 1 0-12c1.31 0 2.52.425 3.507 1.138A7.332 7.332 0 0 0 14 10.647A7.353 7.353 0 0 0 6.647 18A7.353 7.353 0 0 0 14 25.354c2.195 0 4.16-.967 5.507-2.492A5.963 5.963 0 0 1 16 24zm3.913-5.77l2.44.562l.22 2.493l1.288-2.146l2.44.561l-1.644-1.888l1.287-2.147l-2.303.98l-1.644-1.889l.22 2.494z" />
           </svg>TR</a>
-        <a href="/ru/docs"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 36 36">
-            <path fill="#0099B5" d="M0 9v4h36V9a4 4 0 0 0-4-4H4a4 4 0 0 0-4 4z" />
-            <path fill="#1EB53A" d="M36 27v-4H0v4a4 4 0 0 0 4 4h28a4 4 0 0 0 4-4z" />
-            <path fill="#CE1126" d="M0 13h36v1.5H0zm0 8.5h36V23H0z" />
-            <path fill="#EEE" d="M0 18v3.5h36v-7H0z" />
-            <path fill="#FFF"
-              d="M4.2 9.16a3.12 3.12 0 0 1 2.6-3.076a3.12 3.12 0 1 0 0 6.152A3.12 3.12 0 0 1 4.2 9.16zm4.683 2.303l-.14-.431l-.14.431h-.454l.367.267l-.14.431l.367-.267l.366.267l-.14-.431l.367-.267zm2.702 0l-.14-.431l-.14.431h-.453l.367.267l-.14.431l.366-.267l.367.267l-.14-.431l.367-.267zm-.14-2.927l-.14.431h-.453l.367.267l-.14.431l.366-.267l.367.267l-.14-.431l.367-.267h-.454zm2.843 2.927l-.14-.431l-.14.431h-.453l.366.267l-.14.431l.367-.267l.367.267l-.14-.431l.366-.267zm-.14-2.927l-.14.431h-.453l.366.267l-.14.431l.367-.267l.367.267l-.14-.431l.366-.267h-.453zm0-2.496l-.14.431h-.453l.366.267l-.14.431l.367-.267l.367.267l-.14-.431l.366-.267h-.453zm2.843 5.423l-.14-.431l-.14.431h-.454l.367.267l-.14.431l.367-.267l.366.267l-.14-.431l.367-.267zm-.14-2.927l-.14.431h-.454l.367.267l-.14.431l.367-.267l.366.267l-.14-.431l.367-.267h-.453zm0-2.496l-.14.431h-.454l.367.267l-.14.431l.367-.267l.366.267l-.14-.431l.367-.267h-.453zm2.842 5.423l-.14-.431l-.14.431h-.453l.367.267l-.14.431l.366-.267l.367.267l-.14-.431l.367-.267zm-.14-2.927l-.14.431h-.453l.367.267l-.14.431l.366-.267l.367.267l-.14-.431l.367-.267h-.454zm0-2.496l-.14.431h-.453l.367.267l-.14.431l.366-.267l.367.267l-.14-.431l.367-.267h-.454z" />
+          <a href="/ru/docs"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 36 36">
+            <path fill="#CE2028" d="M36 27a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4v-4h36v4z" />
+            <path fill="#22408C" d="M0 13h36v10H0z" />
+            <path fill="#EEE" d="M32 5H4a4 4 0 0 0-4 4v4h36V9a4 4 0 0 0-4-4z" />
           </svg>RU</a>
       </div>
     </ul>
@@ -116,7 +141,7 @@
       <span class="border"></span>
     </div>
     <div class="docs">
-      <div class="catalog">
+      <div class="catalog" id="catalog">
         <div class="docs_catalog">
           <h1 class="docs_catalog_title">Mahsulotlarning umumiy katalogi</h1>
           <div class="docs_catalog_items">
@@ -132,7 +157,7 @@
 
       <div class="border_catalog"></div>
 
-      <div class="catalog guides_main">
+      <div class="catalog guides_main" id="userGuide">
         <h1 class="docs_catalog_title">Yo'riqnoma</h1>
         <div class="guides">
           <a class="tse" href="https://arkenjenerator.com.tr/File/2.12.2022-141226-ARKEN%2001-05%20BELGE.PDF">
@@ -169,7 +194,7 @@
         </div>
       </div>
       <div class="border_catalog"></div>
-      <div class="certificates">
+      <div class="certificates" id="certificates">
         <p class="certificates_title">Sertifikatlar</p>
         <div class="certificates-container">
           <a class="certificate"
@@ -196,7 +221,7 @@
       </div>
 
       <div class="border_catalog"></div>
-      <div class="brochuras">
+      <div class="brochuras" id="brochuras">
         <p class="brochuras_title">Broshyuralar</p>
         <div class="brochuras_items">
           <a href="https://arkenjenerator.com.tr/Content/assest/pdf/urunbrosurleri/Perkins.pdf">
@@ -257,7 +282,7 @@
               d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19c-.14.75-.42 1-.68 1.03c-.58.05-1.02-.38-1.58-.75c-.88-.58-1.38-.94-2.23-1.5c-.99-.65-.35-1.01.22-1.59c.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02c-.09.02-1.49.95-4.22 2.79c-.4.27-.76.41-1.08.4c-.36-.01-1.04-.2-1.55-.37c-.63-.2-1.12-.31-1.08-.66c.02-.18.27-.36.74-.55c2.92-1.27 4.86-2.11 5.83-2.51c2.78-1.16 3.35-1.36 3.73-1.36c.08 0 .27.02.39.12c.1.08.13.19.14.27c-.01.06.01.24 0 .38z" />
           </svg>
         </a>
-        <a href="mailto:info@arkengenerator.uz">
+        <a href="mailto:farhod.promax@gmail.com">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
             <path fill="currentColor"
               d="M12 22q-2.05 0-3.875-.788t-3.188-2.15q-1.362-1.362-2.15-3.187T2 12q0-2.075.788-3.888t2.15-3.174Q6.3 3.575 8.124 2.788T12 2q2.075 0 3.888.788t3.174 2.15q1.363 1.362 2.15 3.175T22 12v1.45q0 1.475-1.012 2.513T18.5 17q-.9 0-1.675-.4t-1.275-1.05q-.675.675-1.588 1.063T12 17q-2.075 0-3.538-1.463T7 12q0-2.075 1.463-3.538T12 7q2.075 0 3.538 1.463T17 12v1.45q0 .725.45 1.137T18.5 15q.6 0 1.05-.413T20 13.45V12q0-3.275-2.363-5.638T12 4Q8.725 4 6.362 6.363T4 12q0 3.275 2.363 5.638T12 20h5v2h-5Zm0-7q1.25 0 2.125-.875T15 12q0-1.25-.875-2.125T12 9q-1.25 0-2.125.875T9 12q0 1.25.875 2.125T12 15Z" />
@@ -303,7 +328,7 @@
                 d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19c-.14.75-.42 1-.68 1.03c-.58.05-1.02-.38-1.58-.75c-.88-.58-1.38-.94-2.23-1.5c-.99-.65-.35-1.01.22-1.59c.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02c-.09.02-1.49.95-4.22 2.79c-.4.27-.76.41-1.08.4c-.36-.01-1.04-.2-1.55-.37c-.63-.2-1.12-.31-1.08-.66c.02-.18.27-.36.74-.55c2.92-1.27 4.86-2.11 5.83-2.51c2.78-1.16 3.35-1.36 3.73-1.36c.08 0 .27.02.39.12c.1.08.13.19.14.27c-.01.06.01.24 0 .38z" />
             </svg>
           </a>
-          <a href="mailto:info@arkengenerator.uz">
+          <a href="mailto:farhod.promax@gmail.com">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
               <path fill="currentColor"
                 d="M12 22q-2.05 0-3.875-.788t-3.188-2.15q-1.362-1.362-2.15-3.187T2 12q0-2.075.788-3.888t2.15-3.174Q6.3 3.575 8.124 2.788T12 2q2.075 0 3.888.788t3.174 2.15q1.363 1.362 2.15 3.175T22 12v1.45q0 1.475-1.012 2.513T18.5 17q-.9 0-1.675-.4t-1.275-1.05q-.675.675-1.588 1.063T12 17q-2.075 0-3.538-1.463T7 12q0-2.075 1.463-3.538T12 7q2.075 0 3.538 1.463T17 12v1.45q0 .725.45 1.137T18.5 15q.6 0 1.05-.413T20 13.45V12q0-3.275-2.363-5.638T12 4Q8.725 4 6.362 6.363T4 12q0 3.275 2.363 5.638T12 20h5v2h-5Zm0-7q1.25 0 2.125-.875T15 12q0-1.25-.875-2.125T12 9q-1.25 0-2.125.875T9 12q0 1.25.875 2.125T12 15Z" />
