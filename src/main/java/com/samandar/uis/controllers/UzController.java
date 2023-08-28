@@ -47,7 +47,6 @@ public class UzController {
     return UZ_PREFIX + "blogs";
   }
 
-<<<<<<< HEAD
   @GetMapping("/blog/{id}")
   public String displayBlogId(@PathVariable String id, Model model) { 
     Blog blog = blogRepository.findById(Long.parseLong(id)).orElseThrow(() -> new BlogNotFoundException(Long.parseLong(id)));
@@ -60,12 +59,7 @@ public class UzController {
     public BlogNotFoundException(Long id) {
       super("Blog not found with ID: " + id);
     }
-=======
 
-  @GetMapping("/blog_detail")
-  public String blog_detail() {
-    return UZ_PREFIX + "blog_detail";
->>>>>>> fa76df96b1be3c2044eab2330362191bae7f5d8f
   }
 
   @GetMapping("/contact")
