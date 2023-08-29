@@ -147,7 +147,7 @@
     </div>
     <div class="detail_item">
       <div class="detail_photo">
-        <img th:src="@{/blog/{photo}(photo=${blog.photo})}" alt="arken">
+        <img th:src="${blog.photo}" alt="arken">
       </div>
       <span class="detail_date">
         <p th:text="${blog.date}"></p>

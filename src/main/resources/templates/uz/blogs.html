@@ -144,7 +144,7 @@
     <div class="blogs">
       <div class="blogs-item" th:each="el : ${blogs}">
         <div class="blog_photo">
-          <img th:src="@{/blog/{photo}(photo=${el.photo})}" alt="arken" width="518">
+          <img th:src="${el.photo}" alt="arken" width="518">
         </div>
         <span class="blog_date">
           <p th:text="${el.date}"></p>

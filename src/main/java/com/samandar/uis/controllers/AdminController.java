@@ -69,36 +69,14 @@ public class AdminController {
 
   @PostMapping("/news/add")
   public ResponseEntity<Map<String, String>> postNewsAdd(@RequestParam String title, @RequestParam String description,
-      @RequestParam("file") MultipartFile file, Model model, RedirectAttributes redirectAttributes) {
+      @RequestParam String file, Model model, RedirectAttributes redirectAttributes) {
     Map<String, String> responses = new HashMap<>();
-
-    if (file.isEmpty()) {
-      responses.put("msg", "Error");
-      redirectAttributes.addFlashAttribute("message", "Please select a file to upload");
-      return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(responses);
-    }
-    try {
-      String filePath = "/root/arkengenerator/src/main/resources/static/blog/";
-      String fileName = UUID.randomUUID() + "-" + file.getOriginalFilename();
-      byte[] bytes = file.getBytes();
-      Path path = Paths
-          .get(filePath + fileName);
-      Files.write(path, bytes);
-
-      redirectAttributes.addFlashAttribute("message",
-          "You successfully uploaded '" + file.getOriginalFilename() + "'");
-      System.out.println("File Uploaded");
-      LocalDateTime currentDateTime = LocalDateTime.now();
-      DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
-      String formattedDateTime = currentDateTime.format(formatter);
-      String filePAth = fileName;
-      Blog blog = new Blog(title, description, formattedDateTime, filePAth);
-      blogRepository.save(blog);
-      return ResponseEntity.ok(responses);
-    } catch (IOException e) {
-      e.printStackTrace();
-      return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(responses);
-    }
+    LocalDateTime currentDateTime = LocalDateTime.now();
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
+    String formattedDateTime = currentDateTime.format(formatter);
+    Blog blog = new Blog(title, description, formattedDateTime, file);
+    blogRepository.save(blog);
+    return ResponseEntity.ok(responses);
   }
 
   @PostMapping("/certi/add")
