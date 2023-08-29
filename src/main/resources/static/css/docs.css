@@ -367,7 +367,11 @@
     flex-direction: column;
     align-items: center;
   }
-
+  .certificate img {
+    width: 350px;
+    height: 500px;
+    object-fit: cover;
+  }
   .brochuras {
     margin: 60px 60px 80px 60px;
     display: flex;
@@ -633,9 +637,8 @@
   .certificate img {
     width: 181.714px;
     height: 257.858px;
-    flex-shrink: 0;
+    object-fit: cover;
   }
-
   .brochuras {
     margin: 20px;
     display: flex;
