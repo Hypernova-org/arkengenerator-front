@@ -41,6 +41,12 @@
               Sertifikat
             </a>
           </li>
+          <li class="mb-2 rounded hover:shadow hover:bg-gray-800">
+            <div onclick="handleExit()"
+              class="inline-block w-full h-full px-3 py-2 font-bold text-white cursor-pointer">
+              Chiqish
+            </div>
+          </li>
         </ul>
       </div>
     </div>
@@ -102,6 +108,15 @@
 <script>
   if (!localStorage.getItem("token") == "admin") {
     window.location.href = "/admin/login";
+  }
+  const handleExit = async () => {
+    localStorage.clear();
+    await Swal.fire(
+      'Muvaffiqiyatli',
+      'Profildan chiqdingiz',
+      'success'
+    );
+    window.location.reload();
   }
 </script>
 <script>

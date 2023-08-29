@@ -42,6 +42,12 @@
               Sertifikat
             </a>
           </li>
+          <li class="mb-2 rounded hover:shadow hover:bg-gray-800">
+            <div onclick="handleExit()"
+              class="inline-block w-full h-full px-3 py-2 font-bold text-white cursor-pointer">
+              Chiqish
+            </div>
+          </li>
         </ul>
       </div>
     </div>
@@ -49,7 +55,7 @@
       <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-1/2">
         <div class="mb-4">
           <div class="flex items-center justify-center w-full">
-            <label for="photo"
+            <label for="file"
               class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50  hover:bg-gray-100">
               <div class="flex flex-col items-center justify-center pt-5 pb-6">
                 <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
@@ -60,12 +66,29 @@
                 </svg>
                 <p class="text-xs text-gray-500 dark:text-gray-400">Only Photo</p>
               </div>
-              <input id="photo" type="file" class="hidden" required />
+              <input id="file" name="file" type="file" class="hidden" required />
             </label>
           </div>
         </div>
+        <div class="mb-4">
+          <label class="block text-grey-darker text-sm font-bold mb-2" for="username">
+            Ssilkani kiriting
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
+            id="url" name="url" type="text" placeholder="Mavzuni kiriting">
+        </div>
+        <div class="mb-6">
+          <label class="block text-grey-darker text-sm font-bold mb-2" for="password">
+            Matnni kiriting
+          </label>
+          <textarea
+            class="shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            id="text" type="password" name="text" placeholder="Malumotlarni kiriting kiriting"></textarea>
+        </div>
         <div class="flex items-center justify-between">
-          <button class="bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          <button id="submitButton"
+            class="bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit">
             Tasdiqlash
           </button>
@@ -79,31 +102,61 @@
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
+  const handleExit = async () => {
+    localStorage.clear();
+    await Swal.fire(
+      'Muvaffiqiyatli',
+      'Profildan chiqdingiz',
+      'success'
+    );
+    window.location.reload();
+  }
+</script>
+<script>
   $(document).ready(function () {
-    if (!localStorage.getItem("token") == "admin") {
-      window.location.href = "/admin/login";
-    }
     $("form").submit(function (event) {
       event.preventDefault();
 
-      const formData = new FormData();
-      formData.append("file", $("#photo")[0].files[0]); // Get the selected file
+      const submitButton = $("#submitButton");
+      submitButton.text("Loading...");
+      submitButton.prop("disabled", true);
 
       $.ajax({
         type: "POST",
-        url: "/admin/certi/add",
-        data: formData,
-        processData: false, // Prevent jQuery from processing the data
-        contentType: false, // Prevent jQuery from setting content type
+        url: "https://empower.uz/upload/arken",
+        data: new FormData(this),
+        processData: false,
+        contentType: false,
         dataType: "json",
         encode: true,
       }).done(async function (data) {
-        await Swal.fire(
-          'Muvaffiqiyatli',
-          'Saqlandi',
-          'success'
-        );
-        window.location.href = "/admin/certi";
+        console.log(data);
+        const datas = new FormData();
+        datas.append("file", data.fileUrl);
+        datas.append("url", $("#url").val());
+        datas.append("text", $("#text").val());
+        $.ajax({
+          type: "POST",
+          url: "/admin/certi/add",
+          data: datas,
+          processData: false,
+          contentType: false,
+          dataType: "json",
+          encode: true,
+        }).done(async function (data) {
+          await Swal.fire(
+            "Muvaffaqiyatli",
+            "Saqlandi",
+            "success"
+          );
+          window.location.href = "/admin/certi";
+        }).fail(function (data) {
+          Swal.fire(
+            "Xatolik",
+            "Yozish xato",
+            "error"
+          );
+        });
       }).fail(function (data) {
         Swal.fire(
           'Xatolik',

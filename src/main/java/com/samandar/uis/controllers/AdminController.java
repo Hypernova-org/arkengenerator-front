@@ -19,14 +19,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.UUID;
 
 @Controller
 @RequestMapping("/admin")
@@ -80,33 +73,12 @@ public class AdminController {
   }
 
   @PostMapping("/certi/add")
-  public ResponseEntity<Map<String, String>> postCertiAdd(@RequestParam("file") MultipartFile file, Model model,
+  public ResponseEntity<Map<String, String>> postCertiAdd(@RequestParam String file, @RequestParam String url, @RequestParam String text, Model model,
       RedirectAttributes redirectAttributes) {
     Map<String, String> responses = new HashMap<>();
-
-    if (file.isEmpty()) {
-      responses.put("msg", "Error");
-      redirectAttributes.addFlashAttribute("message", "Please select a file to upload");
-      return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(responses);
-    }
-    try {
-      String filePath = "/root/arkengenerator/src/main/resources/static/blog/";
-      String fileName = UUID.randomUUID() + "-" + file.getOriginalFilename();
-      byte[] bytes = file.getBytes();
-      Path path = Paths
-          .get(filePath + fileName);
-      Files.write(path, bytes);
-
-      redirectAttributes.addFlashAttribute("message",
-          "You successfully uploaded '" + file.getOriginalFilename() + "'");
-      System.out.println("File Uploaded");
-      Sertificate certi = new Sertificate(fileName);
-      sertificateRepository.save(certi);
-      return ResponseEntity.ok(responses);
-    } catch (IOException e) {
-      e.printStackTrace();
-      return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(responses);
-    }
+    Sertificate certi = new Sertificate(file, url, text);
+    sertificateRepository.save(certi);
+    return ResponseEntity.ok(responses);
   }
 
   @PostMapping("/news/delete")

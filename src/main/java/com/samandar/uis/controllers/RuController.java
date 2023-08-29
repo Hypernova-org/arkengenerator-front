@@ -1,5 +1,9 @@
 package com.samandar.uis.controllers;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
@@ -9,7 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 import com.samandar.uis.models.Blog;
+import com.samandar.uis.models.Sertificate;
 import com.samandar.uis.repo.BlogRepository;
+import com.samandar.uis.repo.SertificateRepository;
 
 import org.springframework.ui.Model;
 
@@ -18,6 +24,9 @@ import org.springframework.ui.Model;
 public class RuController {
 
   private static final String RU_PREFIX = "ru/";
+
+  @Autowired
+  private SertificateRepository sertificateRepository;
 
   @GetMapping
   public String index(Model model) {
@@ -30,7 +39,9 @@ public class RuController {
   }
 
   @GetMapping("/docs")
-  public String docs() {
+  public String docs(Model model) {
+    Iterable<Sertificate> certi = sertificateRepository.findAll();
+    model.addAttribute("sert", certi);
     return RU_PREFIX + "docs";
   }
 
@@ -49,7 +60,11 @@ public class RuController {
 
   @GetMapping("/blog")
   public String blog(org.springframework.ui.Model model) {
-    model.addAttribute("blogs", blogRepository.findAll());
+    Iterable<Blog> blogIterable = blogRepository.findAll();
+    List<Blog> blogs = new ArrayList<>();
+    blogIterable.forEach(blogs::add); // Convert Iterable to List
+    Collections.reverse(blogs); // Reverse the list
+    model.addAttribute("blogs", blogs);
     return RU_PREFIX + "blog";
   }
 

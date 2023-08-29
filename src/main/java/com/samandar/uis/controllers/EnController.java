@@ -9,14 +9,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 import com.samandar.uis.models.Blog;
+import com.samandar.uis.models.Sertificate;
 import com.samandar.uis.repo.BlogRepository;
+import com.samandar.uis.repo.SertificateRepository;
 
 import org.springframework.ui.Model;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 @Controller
 @RequestMapping("/en")
 public class EnController {
   private static final String EN_PREFIX = "en/";
+
+  @Autowired
+  private SertificateRepository sertificateRepository;
 
   @GetMapping
   public String index(Model model) {
@@ -34,7 +43,9 @@ public class EnController {
   }
 
   @GetMapping("/docs")
-  public String docs() {
+  public String docs(Model model) {
+    Iterable<Sertificate> certi = sertificateRepository.findAll();
+    model.addAttribute("sert", certi);
     return EN_PREFIX + "docss";
   }
 
@@ -48,7 +59,11 @@ public class EnController {
 
   @GetMapping("/blog")
   public String blog(org.springframework.ui.Model model) {
-    model.addAttribute("blogs", blogRepository.findAll());
+    Iterable<Blog> blogIterable = blogRepository.findAll();
+    List<Blog> blogs = new ArrayList<>();
+    blogIterable.forEach(blogs::add); // Convert Iterable to List
+    Collections.reverse(blogs); // Reverse the list
+    model.addAttribute("blogs", blogs);
     return EN_PREFIX + "blog";
   }
 
