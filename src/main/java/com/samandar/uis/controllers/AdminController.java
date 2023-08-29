@@ -78,7 +78,7 @@ public class AdminController {
       return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(responses);
     }
     try {
-      String filePath = "C:\\Users\\uchun\\Desktop\\arkengenerators\\src\\main\\resources\\static\\blog\\";
+      String filePath = "/root/arkengenerator/src/main/resources/static/blog/";
       String fileName = UUID.randomUUID() + "-" + file.getOriginalFilename();
       byte[] bytes = file.getBytes();
       Path path = Paths
@@ -112,7 +112,7 @@ public class AdminController {
       return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(responses);
     }
     try {
-      String filePath = "C:\\Users\\uchun\\Desktop\\arkengenerators\\src\\main\\resources\\static\\blog\\";
+      String filePath = "/root/arkengenerator/src/main/resources/static/blog/";
       String fileName = UUID.randomUUID() + "-" + file.getOriginalFilename();
       byte[] bytes = file.getBytes();
       Path path = Paths
@@ -138,6 +138,7 @@ public class AdminController {
     responses.put("msg", "Success");
     return ResponseEntity.ok(responses);
   }
+
   @PostMapping("/certi/delete")
   public ResponseEntity<Map<String, String>> postCertiDelete(@RequestParam Long id) {
     sertificateRepository.deleteById(id);
