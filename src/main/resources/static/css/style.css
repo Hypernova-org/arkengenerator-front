@@ -1041,9 +1041,15 @@ a {
   .footer_top-desc {
     color: #fff;
     font-size: 16px;
+    gap: 2px;
+    display: flex;
+    align-items: center;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+  }
+  .footer_top-desc svg{
+    width: 25px;
   }
   .footer_top-third {
     display: flex;
