@@ -39,7 +39,7 @@ public class MainController {
       connection.setReadTimeout(200);
       String requestBody = "chat_id=-1001917320693&text=🌍 Saytdan xabar keldi:\n 🏢 Kompaniya nomi: " + company_name
           + " \n🙋🏻‍♂️ Ism :" + name
-          + "\n ⬆️ Lavozimi :" + position + "\n☎️ Telefon raqami:" + phone + "\n📩 Xabar : " + message;
+          + "\n ⬆️ Hudud :" + position + "\n☎️ Telefon raqami:" + phone + "\n📩 Xabar : " + message;
       try (OutputStream os = connection.getOutputStream()) {
         byte[] input = requestBody.getBytes("UTF-8");
         os.write(input, 0, input.length);

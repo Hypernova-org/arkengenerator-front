@@ -89,7 +89,7 @@ a {
   }
 
   /* Styles for the "Show More" button */
-
+  
   .navbar {
     background-color: #f20815;
     position: sticky;
@@ -208,8 +208,28 @@ a {
     -o-border-radius: 6px;
     box-shadow: 1px -1px 12px 3px rgba(1, 2, 2, 0.2);
   }
+  .ru-details{
+    width: min-content!important;
+  }
   .ru-water {
     width: 50%;
+  }
+  .ru-brand{
+    left: 35px!important;
+  }
+  .ru-generator{
+    right: 20px!important;
+  }
+  .ru-mator{
+    right: 20px!important;
+    height: fit-content !important;
+  }
+  .ru-div-not{
+    left: 130px !important;
+    width: fit-content!important;
+  }
+  .ru-iso{
+    left: 130px !important;
   }
   .cummins {
     width: 60px !important;

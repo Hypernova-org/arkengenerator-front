@@ -1,6 +1,7 @@
 package com.samandar.uis.controllers;
 
-import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
@@ -64,13 +65,13 @@ public class AdminController {
   public ResponseEntity<Map<String, String>> postNewsAdd(@RequestParam String title, @RequestParam String description,
       @RequestParam String file, Model model, RedirectAttributes redirectAttributes) {
     Map<String, String> responses = new HashMap<>();
-    LocalDateTime currentDateTime = LocalDateTime.now();
-    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
-    String formattedDateTime = currentDateTime.format(formatter);
+    ZonedDateTime currentDateTime = ZonedDateTime.now(ZoneId.of("Asia/Tashkent"));
+    String formattedDateTime = currentDateTime.format(DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm"));
     Blog blog = new Blog(title, description, formattedDateTime, file);
     blogRepository.save(blog);
     return ResponseEntity.ok(responses);
   }
+  
 
   @PostMapping("/certi/add")
   public ResponseEntity<Map<String, String>> postCertiAdd(@RequestParam String file, @RequestParam String url, @RequestParam String text, Model model,
