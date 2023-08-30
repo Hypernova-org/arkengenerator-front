@@ -215,7 +215,7 @@ a {
     width: 50%;
   }
   .ru-brand{
-    left: 35px!important;
+    left: 45px!important;
   }
   .ru-generator{
     right: 20px!important;
@@ -230,6 +230,15 @@ a {
   }
   .ru-iso{
     left: 130px !important;
+  }
+  .ru-portativ-not{
+    left: 110px!important;
+    bottom: 190px!important;
+    width: fit-content;
+  }
+  .products-ru{
+    left: 140px!important;
+    bottom: 200px !important;
   }
   .cummins {
     width: 60px !important;
