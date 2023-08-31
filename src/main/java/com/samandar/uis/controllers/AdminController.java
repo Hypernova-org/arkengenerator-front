@@ -49,7 +49,7 @@ public class AdminController {
 
   @PostMapping()
   public ResponseEntity<Map<String, String>> postIndex(@RequestParam String username, @RequestParam String password) {
-    if ("admin".equals(username) && "admin".equals(password)) {
+    if ("arkengeneratoruz18_23".equals(username) && "arkenadmin_2023".equals(password)) {
       Map<String, String> responses = new HashMap<>();
       responses.put("msg", "Success");
       responses.put("username", "admin");
