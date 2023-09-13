@@ -27,7 +27,7 @@
   .detail_photo{
     width: 100%;
     height: 450px;
-    object-fit: cover;
+    object-fit: contain;
   }
   .detail_item img{
     width: 100%;
@@ -188,7 +188,7 @@
   .detail_photo{
     width: 100%;
     height: 250px;
-    object-fit: cover;
+    object-fit: contain;
   }
   .detail_item img{
     width: 100%;

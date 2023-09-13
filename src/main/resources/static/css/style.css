@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 3px;
   height: 100vh; /* Set the height of the loader to 100vh */
   overflow-y: hidden; /* Hide any overflowing content */
 }
@@ -177,7 +177,21 @@ a {
   .dropdown {
     display: none;
   }
-
+  .ru-list{
+    padding: 0 0 15px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .ru-port-generator{
+    margin-left: 15% !important;
+  }
+  .ru-port-mator{
+    margin-left: 25% !important;
+  }
+  .ru-port-iso{
+    margin-left: 15% !important;
+  }
 
   .products {
     display: flex;
@@ -221,16 +235,12 @@ a {
   .ru-details{
     width: min-content!important;
   }
-  .ru-learn{
-    position: relative;
-    left: 70px;
-    bottom: 15px;
-  }
+
   .ru-water {
     width: 50%;
   }
   .ru-brand{
-    left: 85px!important;
+    left: 8vh!important;
   }
   .ru-generator{
     right: 0px!important;
@@ -239,21 +249,18 @@ a {
     right: 0px!important;
   }
   .ru-div-not{
-    left: 190px !important;
+    left: 100% !important;
     width: fit-content!important;
   }
   .ru-iso{
-    left: 190px !important;
+    left: 170px !important;
   }
   .ru-portativ-not{
     left: 110px!important;
     bottom: 190px!important;
     width: fit-content;
   }
-  .products-ru{
-    left: 140px!important;
-    bottom: 200px !important;
-  }
+
   .cummins {
     width: 60px !important;
   }
@@ -266,6 +273,7 @@ a {
   }
   .portative-wolt {
     bottom: 40px !important;
+
   }
   .portativ-div-not {
     position: relative;
@@ -587,14 +595,13 @@ a {
   .main {
     margin: 45px 0;
   }
-  .ru-details, .portativ-details{
-    padding-left: 290px !important;
+  .ru-list{
+    margin: 0 85px;
+    padding: 0 0 45px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  .ru-learn{
-    margin-left: 40% !important;
-    margin-bottom: 20px !important;
-  }
-
   /* Styles for the "Show More" button */
   .products_learn {
     margin-top: 20px;
@@ -626,7 +633,7 @@ a {
     font-weight: var(--fw-table);
   }
   .navbar_logo {
-    height: 40px;
+    height: 60px;
   }
 
   .docs-btn {
@@ -873,6 +880,7 @@ a {
     align-items: center;
   }
 
+
   .product_btns {
     display: flex;
     justify-content: space-between;
@@ -880,6 +888,7 @@ a {
     padding: 20px 40px;
   }
   .all_btn {
+    min-width: 338px;
     display: flex;
     width: 100% !important;
     border: none;
@@ -946,7 +955,7 @@ a {
     align-items: center;
     gap: 10px;
     color: #f20815;
-    font-size: 18px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: 150.523%;
@@ -955,6 +964,7 @@ a {
   }
   .product_btns b span {
     color: #000;
+    font-size: 24px;
   }
   .product_btns a {
     display: flex;

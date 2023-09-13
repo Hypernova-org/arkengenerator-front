@@ -142,7 +142,7 @@ function startCount(el) {
     if (el.textContent == goal) {
       clearInterval(count);
     }
-  }, 20);
+  }, 1);
 }
 
 
