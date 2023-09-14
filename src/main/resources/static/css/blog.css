@@ -32,6 +32,7 @@
   .detail_item img{
     width: 100%;
     height: 100%;
+    object-fit: contain;
   }
   .detail_date{
     color: #ccc8c8;
@@ -133,10 +134,7 @@
     border-radius: 6px;
     background: #f20815;
   }
-  .detail_photo{
-    width: 100%;
-    object-fit:none;
-  }
+
 }
 @media screen and (max-width: 1280px) {
   .blogs {
@@ -192,13 +190,11 @@
   .detail_photo{
     width: 100%;
     height: 250px;
-    object-fit: none;
   }
   .detail_item img{
     width: 100%;
     height: 100%;
-
-    object-fit: cover;
+    object-fit: contain;
 
 
   }
