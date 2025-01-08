@@ -132,7 +132,7 @@
       }).done(async function (data) {
         console.log(data);
         const datas = new FormData();
-        datas.append("file", data.fileUrl);
+        datas.append("file", data.data.fileUrl);
         datas.append("url", $("#url").val());
         datas.append("text", $("#text").val());
         $.ajax({
